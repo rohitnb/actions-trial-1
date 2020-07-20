@@ -14,4 +14,4 @@ jobs:
       - name: Log Output
         run: |
           echo "${{steps.stepgreet.outputs.time}}"
-          echo "Does this work? Mr. ${{steps.stepgreet.outputs.who-to-greet}}"
+          echo "Does this work? Mr. ${{steps.stepgreet.outputs.nameToGreet}}"
