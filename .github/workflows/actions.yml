@@ -1,4 +1,4 @@
-name: Shell Commands
+name: Javascript action
 
 on: [push]
 
@@ -12,4 +12,6 @@ jobs:
         with: 
           who-to-greet: "Rohit N B"
       - name: Log Output
-        run: echo "${{steps.stepgreet.outputs.time}}"
+        run: |
+          echo "${{steps.stepgreet.outputs.time}}"
+          echo "Does this work? Mr. ${{steps.stepgreet.outputs.who-to-greet}}"
