@@ -12,7 +12,8 @@ jobs:
         run: |
           ls -h 
           chmod +x sample_script.sh
-          ./sample_script
+          ls -lh sample_script.sh
+          ./sample_script.sh
       - name: Simple JS Action
         id: stepgreet
         uses: actions/hello-world-javascript-action@v1
