@@ -1,6 +1,6 @@
 name: Javascript action
 
-on: [push]
+on: [push,pull_request]
 
 jobs:
   run-github-actions:
