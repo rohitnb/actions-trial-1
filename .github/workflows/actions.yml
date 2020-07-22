@@ -1,7 +1,9 @@
 name: Javascript action
 
 on: 
-  push: 
+  push:
+    branches:
+      - master 
   pull_request:
     types: [opened, closed, assigned, reopened]
 
