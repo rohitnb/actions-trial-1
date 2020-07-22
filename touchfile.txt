@@ -1,0 +1,2 @@
+The purpose of this file is to debug actions by triggering push and pull requests.
+Apart from that, this file is useless :D 
