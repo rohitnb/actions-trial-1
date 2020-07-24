@@ -5,11 +5,11 @@ on:
 
 jobs:
   laptop_runner:
-    runs-on: [laptop]
+    runs-on: ubuntu-latest
 
     steps:
       - name: echo Hello
-        run: echo "Hello"
+        run: echo ${{secrets.ACTION_PAT}}
 
 
     
