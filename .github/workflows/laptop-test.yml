@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: echo Hello
-        run: echo $REPOSITORY_NAME
+        run: echo ${{github.event.push.repository}}
 
 
     
