@@ -1,0 +1,15 @@
+name: Laptop Test
+
+on:
+  push:
+
+jobs:
+  laptop_runner:
+    runs-on: [laptop]
+
+    steps:
+      - name: echo Hello
+        run: echo "Hello"
+
+
+    
