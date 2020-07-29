@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: See the github event path
         run: | 
-          echo ${{GITHUB_EVENT_PATH}}
+          echo ${GITHUB_EVENT_PATH}
       # - uses: actions/github-script@v2
       #   with:
       #     github-token: ${{secrets.GITHUB_TOKEN}}
