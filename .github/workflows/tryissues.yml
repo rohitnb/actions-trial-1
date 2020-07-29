@@ -26,4 +26,4 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: [context.issue.user.login]
-            })         
+            })      
