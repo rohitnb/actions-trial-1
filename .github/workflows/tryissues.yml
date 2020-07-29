@@ -7,9 +7,12 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v2
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            console.log(context.issue)
+      - name: See the github event path
+        run: | 
+          echo ${{GITHUB_EVENT_PATH}}
+      # - uses: actions/github-script@v2
+      #   with:
+      #     github-token: ${{secrets.GITHUB_TOKEN}}
+      #     script: |
+      #       console.log(context.issue)
                 
