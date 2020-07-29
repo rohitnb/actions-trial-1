@@ -1,17 +1,19 @@
 name: Do something when an issue is created
 on:
   issues:
-    types: [opened,edited]
-  issue_comment:
-    types: [created,edited]
+    types: [opened]
 
 jobs:
-  issue-created-alert:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Ring the alarm
-        run: |
-          echo "Hey an issue was created!"
-          echo "URL: ${{github.issues.action}}"
-          echo "REPO: ${{github.repository}}"
-          echo "STUFF: ${{github.event.issue}}"
+      - uses: actions/github-script@v2
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting in Issue Number ${issue_number}'
+            })         
