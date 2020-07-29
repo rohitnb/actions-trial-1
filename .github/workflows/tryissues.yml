@@ -1,7 +1,7 @@
 name: Do something when an issue is created
 on:
   issues:
-    types: [opened]
+    types: [opened,edited]
 
 jobs:
   issue-created-alert:
@@ -10,3 +10,4 @@ jobs:
       - name: Ring the alarm
         run: |
           echo "Hey an issue was created!"
+          echo "URL: ${{issues.issue.url}}"
