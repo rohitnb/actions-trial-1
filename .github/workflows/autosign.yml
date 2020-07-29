@@ -12,6 +12,8 @@ jobs:
           echo $RANDOM >> signature.txt
       - name: Commit signature by using command line git
         run: |
+          git config --global user.name "Autobot"
+          git config --global user.email "auto@bot.com"
           git add .
           git commit -m "Adding signature"
           git push "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git" master
