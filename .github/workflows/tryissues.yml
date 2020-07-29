@@ -1,0 +1,12 @@
+name: Do something when an issue is created
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  issue-created-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ring the alarm
+        run: |
+          echo "Hey an issue was created!"
