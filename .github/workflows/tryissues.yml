@@ -14,5 +14,4 @@ jobs:
           echo "Hey an issue was created!"
           echo "URL: ${{github.issues.action}}"
           echo "REPO: ${{github.repository}}"
-          echo "Look at the payload"
-          cat "${GITHUB_EVENT_PATH}"
+          echo "STUFF: ${github.event.issue}"
