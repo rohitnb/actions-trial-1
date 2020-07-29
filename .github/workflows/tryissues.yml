@@ -2,6 +2,8 @@ name: Do something when an issue is created
 on:
   issues:
     types: [opened,edited]
+  issue_comment:
+    types: [created,edited]
 
 jobs:
   issue-created-alert:
@@ -11,3 +13,5 @@ jobs:
         run: |
           echo "Hey an issue was created!"
           echo "URL: ${{github.issues.action}}"
+          echo "REPO: ${{github.repository}}"
+          echo "GH: ${{github}}"
