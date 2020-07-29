@@ -15,5 +15,11 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting in Issue Number '+context.issue.number
+              body: 'Hi '+context.issue.user.login+' 👋 Thanks for reporting this issue - '+context.issue.html_url
+            })
+            github.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: [context.issue.user.login]
             })         
